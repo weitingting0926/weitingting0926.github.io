@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Redis基本操作（Window平台）命令行模式工具使用思考 功能性命令 清除屏幕信息 帮助信息查询 退出指令  信息添加 功能 ：设置Key，value数据 命令 ：set key value 范例 ：set name itheima  信息查询 功能：根据Key查询对应的value，如果不存在，返回空（nil） 命令：get key 范例：get name  清除屏幕信息 功能：清楚屏幕中的信">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2020/12/14/Redis%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C(1)/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Redis基本操作（Window平台）命令行模式工具使用思考 功能性命令 清除屏幕信息 帮助信息查询 退出指令  信息添加 功能 ：设置Key，value数据 命令 ：set key value 范例 ：set name itheima  信息查询 功能：根据Key查询对应的value，如果不存在，返回空（nil） 命令：get key 范例：get name  清除屏幕信息 功能：清楚屏幕中的信">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-12-14T05:30:00.705Z">
+<meta property="article:modified_time" content="2020-12-13T15:31:29.617Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Redis基本操作(1)" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/12/14/Redis%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C(1)/" class="article-date">
+  <time class="dt-published" datetime="2020-12-14T05:30:00.705Z" itemprop="datePublished">2020-12-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="Redis基本操作（Window平台）"><a href="#Redis基本操作（Window平台）" class="headerlink" title="Redis基本操作（Window平台）"></a>Redis基本操作（Window平台）</h3><h5 id="命令行模式工具使用思考"><a href="#命令行模式工具使用思考" class="headerlink" title="命令行模式工具使用思考"></a>命令行模式工具使用思考</h5><ul>
+<li>功能性命令</li>
+<li>清除屏幕信息</li>
+<li>帮助信息查询</li>
+<li>退出指令</li>
+</ul>
+<h5 id="信息添加"><a href="#信息添加" class="headerlink" title="信息添加"></a>信息添加</h5><ul>
+<li><strong>功能</strong> ：设置Key，value数据</li>
+<li><strong>命令</strong> ：<strong>set key value</strong></li>
+<li>范例 ：set name itheima</li>
+</ul>
+<h5 id="信息查询"><a href="#信息查询" class="headerlink" title="信息查询"></a>信息查询</h5><ul>
+<li><strong>功能</strong>：根据Key查询对应的value，如果不存在，返回空（nil）</li>
+<li><strong>命令</strong>：<strong>get key</strong></li>
+<li>范例：get name</li>
+</ul>
+<h5 id="清除屏幕信息"><a href="#清除屏幕信息" class="headerlink" title="清除屏幕信息"></a>清除屏幕信息</h5><ul>
+<li><strong>功能</strong>：清楚屏幕中的信息</li>
+<li><strong>命令</strong>：<strong>clear</strong></li>
+</ul>
+<h5 id="帮助"><a href="#帮助" class="headerlink" title="帮助"></a>帮助</h5><ul>
+<li><strong>功能</strong>：获取命令帮助文档，获取组中所有命令信息</li>
+<li><strong>命令</strong>：</li>
+</ul>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp; <strong>help 命令名称</strong></p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp; <strong>help @组名</strong></p>
+<h5 id="退出客户端命令行模式"><a href="#退出客户端命令行模式" class="headerlink" title="退出客户端命令行模式"></a>退出客户端命令行模式</h5><ul>
+<li><strong>功能</strong>：退出客户端</li>
+<li><strong>命令</strong>：<strong>quit</strong>&emsp;&emsp; <strong>exit</strong>&emsp;&emsp; <strong><ESC></strong></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/12/14/Redis%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C(1)/" data-id="ckio4bqts0000dwriema63qgw" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/12/14/wenzhang/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">wenzhang</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/12/14/Redis%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C(1)/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/14/wenzhang/">wenzhang</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/14/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2020 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
